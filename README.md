@@ -7,7 +7,7 @@
 1 安装依赖：
 
 ```sh
-npm install git+http://gitlab.futunn.com/webpackage/misc-eslint-rule.git#1.0.0
+npm install git+http://gitlab.futunn.com/webpackage/misc-eslint-rule.git#1.0.0 --save-dev
 ```
 
 2 在项目web根目录上层新建.eslintrc.js文件
