@@ -7,7 +7,7 @@
 1 安装依赖：
 
 ```sh
-npm install git+http://gitlab.futunn.com/webpackage/misc-eslint-rule.git#1.0.0 --save-dev
+npm install git+http://gitlab.futunn.com/webpackage/eslint-config-futu.git#1.0.0 --save-dev
 ```
 
 2 在项目web根目录上层新建.eslintrc.js文件
@@ -15,7 +15,7 @@ npm install git+http://gitlab.futunn.com/webpackage/misc-eslint-rule.git#1.0.0 -
 ```javascript
 module.exports = {
     root: true,
-    extends: 'misc-eslint-rule'
+    extends: 'eslint-config-futu'
     rules:{
         // 如果项目有特殊需求，可在此覆盖
     }

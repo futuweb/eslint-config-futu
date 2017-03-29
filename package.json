@@ -1,5 +1,5 @@
 {
-  "name": "misc-eslint-rule",
+  "name": "eslint-config-futu",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.futunn.com:webpackage/misc-eslint-rule.git"
+    "url": "git@gitlab.futunn.com:webpackage/eslint-config-futu.git"
   },
   "author": "",
   "license": "ISC"
