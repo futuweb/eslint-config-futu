@@ -11,5 +11,8 @@
     "url": "git@gitlab.futunn.com:webpackage/eslint-config-futu.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "peerDependencies": {
+    "eslint": ">= 3"
+  }
 }

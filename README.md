@@ -7,6 +7,7 @@
 1 安装依赖：
 
 ```sh
+npm install eslint --save-dev
 npm install git+http://gitlab.futunn.com/webpackage/eslint-config-futu.git#1.0.0 --save-dev
 ```
 
@@ -21,3 +22,17 @@ module.exports = {
     }
 };
 ```
+
+## 附：编辑器使用方式
+
+### WebStorm
+
+设置 - 语言框架 - JavaScript - 质量工具 - 勾选ESLint
+
+### sublime text
+
+安装SublimeLinter，然后安装SublimeLinter-contrib-eslint即可。
+
+### VSCode
+
+安装ESLint，启用即可。
