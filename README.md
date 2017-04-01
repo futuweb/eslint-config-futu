@@ -16,8 +16,8 @@ npm install git+http://gitlab.futunn.com/webpackage/eslint-config-futu.git#1.0.0
 ```javascript
 module.exports = {
     root: true,
-    extends: 'eslint-config-futu'
-    rules:{
+    extends: 'eslint-config-futu',
+    rules:{
         // 如果项目有特殊需求，可在此覆盖
     }
 };
