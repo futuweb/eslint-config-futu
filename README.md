@@ -59,3 +59,13 @@ ESLint package选择**项目中的**`node_modules/eslint`，注意是项目中�
 
 1. 使用`./node_modules/.bin/eslint`，或者将这个命令写入`npm scripts`。在`npm scripts`中可以直接写`eslint`，会默认从`./node_modules/.bin`下查找`eslint`命令。
 2. 全局安装`eslint-cli`这个第三方库，然后使用`eslint`命令。
+
+## 历史记录
+
+### 1.0.1 2017-04-01
+
+- 增加[no-self-assign](http://eslint.org/docs/rules/no-self-assign)检查
+
+### 1.0.0 2017-03-30
+
+- 初始化规则

@@ -32,6 +32,8 @@ module.exports = {
         "space-unary-ops": ["error"],
         // 运算符前后加空格
         "space-infix-ops": ["error"],
+        // 不允许给自己赋值
+        "no-self-assign": ["error"],
         // 不允许抛非Error实例
         "no-throw-literal": ["warn"],
         // 不允许重名变量
