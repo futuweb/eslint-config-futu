@@ -18,8 +18,8 @@ module.exports = {
     root: true,
     extends: 'eslint-config-futu',
     parserOptions: {
-        'ecmaVersion': 7,
-        'sourceType': 'module'
+        ecmaVersion: 7,
+        sourceType: 'module'
     },
     rules:{
         // 如果项目有特殊需求，可在此覆盖
