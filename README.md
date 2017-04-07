@@ -17,6 +17,10 @@ npm install git+http://gitlab.futunn.com/webpackage/eslint-config-futu.git#1.0.0
 module.exports = {
     root: true,
     extends: 'eslint-config-futu',
+    parserOptions: {
+        'ecmaVersion': 7,
+        'sourceType': 'module'
+    },
     rules:{
         // 如果项目有特殊需求，可在此覆盖
     }
