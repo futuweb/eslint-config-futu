@@ -7,8 +7,7 @@
 1 安装依赖：
 
 ```sh
-npm install eslint --save-dev
-npm install git+http://gitlab.futunn.com/webpackage/eslint-config-futu.git#1.0.0 --save-dev
+npm install eslint eslint-config-futu --save-dev
 ```
 
 2 在项目web根目录上层新建.eslintrc.js文件
