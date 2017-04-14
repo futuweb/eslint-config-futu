@@ -84,7 +84,7 @@ ESLint package选择**项目中的**`node_modules/eslint`，注意是项目中�
 - 增加[max-params](http://eslint.org/docs/rules/max-params)检查
 - 增加[no-useless-return](http://eslint.org/docs/rules/no-useless-return)检查
 - 增加[no-nested-ternary](http://eslint.org/docs/rules/no-nested-ternary)检查
-- 增加[no-multi-spaces](http://eslint.org/docs/rules/no-nested-ternary)检查
+- 增加[no-multi-spaces](http://eslint.org/docs/rules/no-multi-spaces)检查
 - 增加[guard-for-in](http://eslint.org/docs/rules/guard-for-in)检查
 
 ### 1.0.0 2017-03-30
