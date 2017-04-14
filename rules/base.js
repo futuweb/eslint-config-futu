@@ -16,6 +16,8 @@ module.exports = {
         "semi": ["error", "always"],
         // 4个空格缩进
         "indent": ["error", 4],
+        // 拒绝 tab
+        "no-tabs": ["error"],
         // 字符串单引号
         "quotes": ["error", "single"],
         // 全等号
@@ -63,10 +65,43 @@ module.exports = {
                 "ArrowFunctionExpression": false
             }
         }],
+        "valid-jsdoc": ["warn", {
+            "matchDescription": ".+",
+            "requireParamDescription": true,
+            "requireReturnDescription": true
+        }],
         // 定义未使用的变量
         "no-unused-vars": ["warn", {
             "vars": "all",
             "args": "none"
-        }]
+        }],
+        // 变量先声明再使用
+        "no-use-before-define": ["error", {
+            "variables": true
+        }],
+        // 不允许链式赋值, 每个变量声明单独成行
+        "no-multi-assign": ["warn"],
+        // this
+        "no-invalid-this": ["warn"],
+        // 构造函数名首字母大写
+        "new-cap": ["error"],
+        // 函数最多接受5个参数
+        "max-params": ["warn", {
+            "max": 5
+        }],
+        // 无用的 return
+        "no-useless-return": ["warn"],
+        // 不允许多层3元运算，可读性差
+        "no-nested-ternary": ["warn"],
+        // 不允许多空格（为了好看）
+        "no-multi-spaces": ["warn", {
+            "exceptions": {
+                "VariableDeclarator": true
+            }
+        }],
+        // console
+        "no-console": 0,
+        // for in 遍历需过滤掉原型上的属性
+        "guard-for-in": ['warn']
     }
 };

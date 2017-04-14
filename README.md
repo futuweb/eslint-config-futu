@@ -16,6 +16,11 @@ npm install eslint eslint-config-futu --save-dev
 module.exports = {
     root: true,
     extends: 'eslint-config-futu',
+    env: {
+        browser: true,
+        node: true,
+        amd: true
+    },
     parserOptions: {
         ecmaVersion: 7,
         sourceType: 'module'
@@ -65,9 +70,22 @@ ESLint package选择**项目中的**`node_modules/eslint`，注意是项目中�
 
 ## 历史记录
 
-### 1.0.1 2017-04-01
+### 1.0.1 2017-04-14
 
+- 允许 console [no-console](http://eslint.org/docs/rules/no-console)
 - 增加[no-self-assign](http://eslint.org/docs/rules/no-self-assign)检查
+- 增加[no-tabs](http://eslint.org/docs/rules/no-tabs)检查
+- 增加[valid-jsdoc](http://eslint.org/docs/rules/valid-jsdoc)检查
+- 增加[no-unused-vars](http://eslint.org/docs/rules/no-unused-vars)检查
+- 增加[no-use-before-define](http://eslint.org/docs/rules/no-use-before-define)检查
+- 增加[no-multi-assign](http://eslint.org/docs/rules/no-multi-assign)检查
+- 增加[no-invalid-this](http://eslint.org/docs/rules/no-invalid-this)检查
+- 增加[new-cap](http://eslint.org/docs/rules/new-cap)检查
+- 增加[max-params](http://eslint.org/docs/rules/max-params)检查
+- 增加[no-useless-return](http://eslint.org/docs/rules/no-useless-return)检查
+- 增加[no-nested-ternary](http://eslint.org/docs/rules/no-nested-ternary)检查
+- 增加[no-multi-spaces](http://eslint.org/docs/rules/no-nested-ternary)检查
+- 增加[guard-for-in](http://eslint.org/docs/rules/guard-for-in)检查
 
 ### 1.0.0 2017-03-30
 
