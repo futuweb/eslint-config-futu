@@ -77,7 +77,9 @@ module.exports = {
         }],
         // 变量先声明再使用
         "no-use-before-define": ["error", {
-            "variables": true
+            "variables": true,
+            "functions": false,
+            "classes": false
         }],
         // 不允许链式赋值, 每个变量声明单独成行
         "no-multi-assign": ["warn"],
