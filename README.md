@@ -70,6 +70,10 @@ ESLint package选择**项目中的**`node_modules/eslint`，注意是项目中�
 
 ## 历史记录
 
+### 1.0.2 2017-04-18
+
+- 修正‘no-use-before-define’规则，只做变量的检查，函数与类不做检查
+
 ### 1.0.1 2017-04-14
 
 - 允许 console [no-console](http://eslint.org/docs/rules/no-console)
