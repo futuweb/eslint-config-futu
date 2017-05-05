@@ -55,6 +55,14 @@ ESLint package选择**项目中的**`node_modules/eslint`，注意是项目中�
 
 安装ESLint插件，启用即可。
 
+### atom
+
+apm install linter
+apm install linter-ui-default
+apm install linter-eslint
+
+启用这三个插件便可
+
 ## 注：为什么不能使用全局ESLint工具
 
 因为在项目中会通过npm在项目中安装`eslint-config-futu`，然后基于这个公共规则配置文件来使用ESLint。
