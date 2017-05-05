@@ -58,7 +58,9 @@ ESLint package选择**项目中的**`node_modules/eslint`，注意是项目中�
 ### atom
 
 apm install linter
+
 apm install linter-ui-default
+
 apm install linter-eslint
 
 启用这三个插件便可
