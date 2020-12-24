@@ -31,6 +31,41 @@ module.exports = {
 };
 ```
 
+## 在TypeScript项目中使用
+
+1. 安装依赖
+
+```bash
+npm install eslint typescript eslint-config-futu --save-dev
+```
+
+2. 在项目web根目录上层新建.eslintrc.js文件
+
+```javascript
+module.exports = {
+    root: true,
+    extends: 'eslint-config-futu/typescript',  // 这里要使用'eslint-config-futu/typescript'配置
+    env: {
+        browser: true,
+        node: true,
+        amd: true
+    },
+    parserOptions: {
+        ecmaVersion: 7,
+        sourceType: 'module'，
+        // recommend to use another config file like tsconfig.eslint.json and extends tsconfig.json in it.
+    		// because you may be need to lint test/**/*.test.ts but no need to emit to js.
+    		// @see https://github.com/typescript-eslint/typescript-eslint/issues/890
+    		project: './tsconfig.json'
+    },
+    rules:{
+        // 如果项目有特殊需求，可在此覆盖
+    }
+}
+```
+
+
+
 ## 附：编辑器使用方式
 
 不要全局安装ESLint工具，不要全局安装ESLint工具，不要全局安装ESLint工具。
@@ -79,6 +114,10 @@ apm install linter-eslint
 2. 全局安装`eslint-cli`这个第三方库，然后使用`eslint`命令。
 
 ## 历史记录
+
+### 1.1.0 2020-12-24
+
+- 支持ts文件校验
 
 ### 1.0.3 2017-04-20
 
