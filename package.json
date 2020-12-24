@@ -8,8 +8,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.futunn.com:webpackage/eslint-config-futu.git"
+    "url": "https://github.com/futuweb/eslint-config-futu"
   },
+  "homepage": "https://github.com/futuweb/eslint-config-futu",
   "author": "",
   "license": "ISC",
   "peerDependencies": {
