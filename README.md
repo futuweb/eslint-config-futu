@@ -117,7 +117,12 @@ apm install linter-eslint
 
 ### 1.1.0 2020-12-24
 
-- 支持ts文件校验
+- 增加 [prefer-const](https://eslint.org/docs/rules/prefer-const) 检查
+- 增加 [no-var](https://eslint.org/docs/rules/no-var) 检查
+- 支持typescript文件校验
+- 增加 [@typescript-eslint/no-var-requires](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-var-requires.md) 检查
+- 增加 [@typescript-eslint/no-explicit-any](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-explicit-any.md) 检查
+- 增加 [@typescript-eslint/ban-ts-comment](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-ts-comment.md) 检查
 
 ### 1.0.3 2017-04-20
 
