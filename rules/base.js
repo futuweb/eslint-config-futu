@@ -104,6 +104,8 @@ module.exports = {
         // console
         "no-console": 0,
         // for in 遍历需过滤掉原型上的属性
-        "guard-for-in": ['warn']
+        "guard-for-in": ['warn'],
+        "prefer-const": ["error"],
+        "no-var": ["error"]
     }
 };
