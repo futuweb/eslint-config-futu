@@ -1,3 +1,3 @@
 module.exports = {
-    extends: 'eslint-config-futu/rules/base'
+    extends: './rules/base'
 };
