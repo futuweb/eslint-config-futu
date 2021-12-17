@@ -112,6 +112,10 @@ ESLint package选择**项目中的**`node_modules/eslint`，注意是项目中�
 
 ## 历史记录
 
+### 2.0.0-alpha.0 2021-12-17
+
+- 修订诸多规范
+
 ### 1.1.0 2020-12-24
 
 - 增加 [prefer-const](https://eslint.org/docs/rules/prefer-const) 检查
