@@ -2,6 +2,18 @@
 
 富途所有项目共享的ESLint规则，与[JavaScript编码规范](http://gitlab.futunn.com/web/webwiki/wikis/style-guidelines-javascript)对应。
 
+## 预设场景
+
+- 浏览器 ✅
+- Node.js ✅
+- CommonJS ✅
+- ES6(ES2015) ✅
+- ES2017 ✅
+- Jest ✅
+- Vue.js ✅
+- jQuery ❌
+- AMD ❌
+
 ## 使用方式
 
 1 安装依赖：
@@ -15,17 +27,12 @@ npm install eslint eslint-config-futu --save-dev
 ```javascript
 module.exports = {
     root: true,
-    extends: 'eslint-config-futu',
+    extends: 'eslint-config-futu',
     env: {
-        browser: true,
-        node: true,
-        amd: true
     },
     parserOptions: {
-        ecmaVersion: 7,
-        sourceType: 'module'
-    },
-    rules:{
+    },
+    rules:{
         // 如果项目有特殊需求，可在此覆盖
     }
 };
@@ -44,7 +51,7 @@ npm install eslint typescript eslint-config-futu --save-dev
 ```javascript
 module.exports = {
     root: true,
-    extends: 'eslint-config-futu/typescript',  // 这里要使用'eslint-config-futu/typescript'配置
+    extends: 'eslint-config-futu/typescript',  // 这里要使用'eslint-config-futu/typescript'配置
     env: {
         browser: true,
         node: true,
@@ -52,13 +59,13 @@ module.exports = {
     },
     parserOptions: {
         ecmaVersion: 7,
-        sourceType: 'module'，
+        sourceType: 'module'，
         // recommend to use another config file like tsconfig.eslint.json and extends tsconfig.json in it.
     		// because you may be need to lint test/**/*.test.ts but no need to emit to js.
     		// @see https://github.com/typescript-eslint/typescript-eslint/issues/890
     		project: './tsconfig.json'
-    },
-    rules:{
+    },
+    rules:{
         // 如果项目有特殊需求，可在此覆盖
     }
 }
@@ -90,16 +97,6 @@ ESLint package选择**项目中的**`node_modules/eslint`，注意是项目中�
 
 安装ESLint插件，启用即可。
 
-### atom
-
-apm install linter
-
-apm install linter-ui-default
-
-apm install linter-eslint
-
-启用这三个插件便可
-
 ## 注：为什么不能使用全局ESLint工具
 
 因为在项目中会通过npm在项目中安装`eslint-config-futu`，然后基于这个公共规则配置文件来使用ESLint。
@@ -126,7 +123,7 @@ apm install linter-eslint
 
 ### 1.0.3 2017-04-20
 
-- 修正 tag 1.0.2 
+- 修正 tag 1.0.2
 
 ### 1.0.2 2017-04-18
 
