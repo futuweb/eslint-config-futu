@@ -10,6 +10,9 @@ module.exports = {
         commonjs: true,
     },
     rules: {
+        // unix换行符
+        'linebreak-style': ['error', 'unix'],
+
         // 驼峰命名
         camelcase: ['error'],
         // 构造函数名首字母大写
@@ -65,47 +68,48 @@ module.exports = {
         'prefer-arrow-callback': ['error'],
         // 箭头函数括号
         'arrow-parens': ['error', 'as-needed', { requireForBlockBody: true }],
-        // unix换行符
-        /* linebreak-style: ["error", "unix"],
+        // fallthrough要有注释
+        'no-fallthrough': ['error', { commentPattern: 'fall ?through' }],
+        // 必须有default
+        'default-case': ['error'],
+        // default放最后
+        'default-case-last': ['error'],
+        // 单行注释
+        'line-comment-position': ['warn', { position: 'above' }],
 
+        // 未在规范中写明，但重要的
         // 拒绝 tab
-        no-tabs: ["error"],
+        'no-tabs': ['error'],
         // 全等号
-        eqeqeq: ["error", "always"],
+        eqeqeq: ['error', 'always'],
         // 不重写保留字
-        no-shadow-restricted-names: ["error"],
+        'no-shadow-restricted-names': ['error'],
         // 不允许label
-        no-labels: ["error"],
+        'no-labels': ['error'],
         // 不允许扩展原型
-        no-extend-native: ["error"],
-        // 单词运算符加空格（new typeof之类）
-        space-unary-ops: ["error"],
-        // 运算符前后加空格
-        space-infix-ops: ["error"],
+        'no-extend-native': ['error'],
         // 不允许给自己赋值
-        no-self-assign: ["error"],
+        'no-self-assign': ['error'],
         // 不允许抛非Error实例
-        no-throw-literal: ["warn"],
+        'no-throw-literal': ['warn'],
         // 不允许重名变量
-        no-shadow: ["warn", {
+        'no-shadow': ['warn', {
             builtinGlobals: true,
-            hoist: "all",
+            hoist: 'all',
             allow: [
-                "e",
-                "err",
-                "error",
-                "key",
-                "value",
-                "data",
-                "i",
-                "j",
-                "k",
-                "$",
-                "jQuery"
+                'e',
+                'err',
+                'error',
+                'key',
+                'value',
+                'data',
+                'i',
+                'j',
+                'k',
             ]
          }],
         // jsdoc
-        require-jsdoc: ["warn", {
+        /* require-jsdoc: ["warn", {
             require: {
                 FunctionDeclaration: true,
                 MethodDefinition: true,
@@ -117,30 +121,25 @@ module.exports = {
             matchDescription: ".+",
             requireParamDescription: true,
             requireReturnDescription: true
-        }],
+        }], */
         // 变量先声明再使用
-        no-use-before-define: ["error", {
+        'no-use-before-define': ['error', {
             variables: true,
             functions: false,
             classes: false
         }],
         // this
-        no-invalid-this: ["warn"],
-        // 无用的 return
-        no-useless-return: ["warn"],
+        'no-invalid-this': ['warn'],
         // 不允许多层3元运算，可读性差
-        no-nested-ternary: ["warn"],
+        'no-nested-ternary': ['error'],
         // 不允许多空格（为了好看）
-        no-multi-spaces: ["warn", {
+        'no-multi-spaces': ['warn', {
             exceptions: {
                 VariableDeclarator: true
             }
         }],
-        // console
-        no-console: 0,
-        // for in 遍历需过滤掉原型上的属性
-        guard-for-in: ['warn'],
-        prefer-const: ["error"],
-        no-var: ["error"] */
+        'prefer-const': ['error'],
+        'no-trailing-spaces': ['error'],
+        'eol-last': ['error', 'always'],
     }
 };

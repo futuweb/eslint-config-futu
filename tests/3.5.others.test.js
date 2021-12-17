@@ -11,7 +11,8 @@ function aa ()
     console.log('1');
 }
 aa();
-    `);
+`
+    );
     expect(result.length).toBe(1);
     expect(result[0].messages.length).toBe(1);
 
@@ -20,7 +21,8 @@ function aa () {
     console.log('1');
 }
 aa();
-    `);
+`
+    );
     expect(result.length).toBe(1);
     expect(result[0].messages.length).toBe(0);
 });
@@ -31,7 +33,8 @@ function aa () {
     console.log('1')
 }
 aa()
-    `);
+`
+    );
     expect(result.length).toBe(1);
     expect(result[0].messages.length).toBe(2);
     expect(result[0].messages[0].message).toBe(`Missing semicolon.`);
@@ -45,7 +48,8 @@ test('单引号', async () => {
     result = await eslint.lintText(`
 const aa = "1";
 console.log(aa);
-    `);
+`
+    );
     expect(result.length).toBe(1);
     expect(result[0].messages.length).toBe(1);
     expect(result[0].messages[0].message).toBe(`Strings must use singlequote.`);
@@ -54,7 +58,8 @@ console.log(aa);
     result = await eslint.lintText(`
 const aa = \`1\`;
 console.log(aa);
-    `);
+`
+    );
     expect(result.length).toBe(1);
     expect(result[0].messages.length).toBe(0);
 
@@ -62,7 +67,8 @@ console.log(aa);
     result = await eslint.lintText(`
 const aa = "1'";
 console.log(aa);
-    `);
+`
+    );
     expect(result.length).toBe(1);
     expect(result[0].messages.length).toBe(0);
 });
@@ -72,7 +78,8 @@ test('单行if/else/for/while需要大括号包裹', async () => {
 
     result = await eslint.lintText(`
 if (true) console.log('1');
-    `);
+`
+    );
     expect(result.length).toBe(1);
     expect(result[0].messages.length).toBe(2);
     expect(result[0].messages[0].message).toBe(`Unexpected constant condition.`);
@@ -82,7 +89,8 @@ if (true) console.log('1');
 if (true) {
     console.log('1');
 } else console.log('2');
-    `);
+`
+    );
     expect(result.length).toBe(1);
     expect(result[0].messages.length).toBe(2);
     expect(result[0].messages[1].message).toBe(`Expected { after 'else'.`);
@@ -91,14 +99,16 @@ if (true) {
 const one = 1;
 const ten = 10;
 for (let aa = one; aa < ten; aa++) console.log(aa);
-    `);
+`
+    );
     expect(result.length).toBe(1);
     expect(result[0].messages.length).toBe(1);
     expect(result[0].messages[0].message).toBe(`Expected { after 'for' condition.`);
 
     result = await eslint.lintText(`
 while (one) console.log('1');
-    `);
+`
+    );
     expect(result.length).toBe(1);
     expect(result[0].messages.length).toBe(2);
     expect(result[0].messages[1].message).toBe(`Expected { after 'while' condition.`);
@@ -107,7 +117,8 @@ while (one) console.log('1');
 test('不允许魔法数字', async () => {
     const result = await eslint.lintText(`
 console.log(123);
-    `);
+`
+    );
     expect(result.length).toBe(1);
     expect(result[0].messages.length).toBe(1);
     expect(result[0].messages[0].message).toBe(`No magic number: 123.`);
@@ -119,7 +130,8 @@ test('单行代码不超过100字符', async () => {
     result = await eslint.lintText(`
 const aa = '1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890';
 console.log(aa);
-    `);
+`
+    );
     expect(result.length).toBe(1);
     expect(result[0].messages.length).toBe(1);
     expect(result[0].messages[0].message).toBe(`This line has a length of 114. Maximum allowed is 100.`);
@@ -127,7 +139,8 @@ console.log(aa);
     result = await eslint.lintText(`
 const aa = '<div class="abc def ghi jkl mno pqr stu vw xyz">12345678901234567890123456789012345678901234567890</div>';
 console.log(aa);
-    `);
+`
+    );
     expect(result.length).toBe(1);
     expect(result[0].messages.length).toBe(0);
 });
@@ -152,14 +165,15 @@ const aa = function (p1, p2, p3, p4, p5, p6) {
     console.log(p1, p2, p3, p4, p5, p6);
 };
 aa('1', '2', '3', '4', '5', '6');
-    `);
+`
+    );
     expect(result.length).toBe(1);
     expect(result[0].messages.length).toBe(1);
     expect(result[0].messages[0].message).toBe(`Function has too many parameters (6). Maximum allowed is 5.`);
 });
 
 test('不允许使用逗号语句', async () => {
-    const result = await eslint.lintText(`console.log('1'), console.log('2');`);
+    const result = await eslint.lintText(`console.log('1'), console.log('2');\n`);
     expect(result.length).toBe(1);
     expect(result[0].messages.length).toBe(1);
     expect(result[0].messages[0].message).toBe(`Unexpected use of comma operator.`);
@@ -169,7 +183,8 @@ test('Symbol带描述', async () => {
     const result = await eslint.lintText(`
 const aa = Symbol();
 console.log(aa);
-    `);
+`
+    );
     expect(result.length).toBe(1);
     expect(result[0].messages.length).toBe(1);
     expect(result[0].messages[0].message).toBe(`Expected Symbol to have a description.`);
@@ -183,7 +198,8 @@ const aa = ['1', '2', '3'].map(function (item) {
     return item;
 });
 console.log(aa);
-    `);
+`
+    );
     expect(result.length).toBe(1);
     expect(result[0].messages.length).toBe(1);
     expect(result[0].messages[0].message).toBe(`Unexpected function expression.`);
@@ -191,7 +207,8 @@ console.log(aa);
     result = await eslint.lintText(`
 const aa = ['1', '2', '3'].map(item => item);
 console.log(aa);
-    `);
+`
+    );
     expect(result.length).toBe(1);
     expect(result[0].messages.length).toBe(0);
 });
@@ -204,14 +221,16 @@ const aa = ['1', '2', '3'].map((item) => {
     return item;
 });
 console.log(aa);
-    `);
+`
+    );
     expect(result.length).toBe(1);
     expect(result[0].messages.length).toBe(0);
 
     result = await eslint.lintText(`
 const aa = ['1', '2', '3'].map(item => item);
 console.log(aa);
-    `);
+`
+);
     expect(result.length).toBe(1);
     expect(result[0].messages.length).toBe(0);
 });
