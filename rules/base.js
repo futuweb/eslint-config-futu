@@ -53,7 +53,7 @@ module.exports = {
         // 只允许单行省略大括号
         curly: ['error', 'all'],
         // 不允许魔法数字，但允许数组索引、默认值、对象中使用
-        'no-magic-numbers': ['error', { ignoreArrayIndexes: true, ignoreDefaultValues: true, enforceConst: false, detectObjects: false }],
+        // 'no-magic-numbers': ['error', { ignoreArrayIndexes: true, ignoreDefaultValues: true, enforceConst: false, detectObjects: false }],
         // 单行代码不得超过100列，HTML模板除外
         'max-len': ['error', { code: 100, ignoreComments: true, ignoreRegExpLiterals: true, ignoreStrings: false, ignoreTemplateLiterals: false, ignorePattern: '<.*>' }],
         // 单函数代码不超过50行（不含空行和注释）
