@@ -67,7 +67,8 @@ module.exports = {
         // 尽量使用箭头函数回调
         'prefer-arrow-callback': ['error'],
         // 箭头函数括号
-        'arrow-parens': ['error', 'as-needed', { requireForBlockBody: true }],
+        // 'arrow-parens': ['error', 'as-needed', { requireForBlockBody: true }],
+        'arrow-parens': ['error', 'always'],
         // fallthrough要有注释
         'no-fallthrough': ['error', { commentPattern: 'fall ?through' }],
         // 必须有default

@@ -114,7 +114,7 @@ while (one) console.log('1');
     expect(result[0].messages[1].message).toBe(`Expected { after 'while' condition.`);
 });
 
-test('不允许魔法数字', async () => {
+/* test('不允许魔法数字', async () => {
     const result = await eslint.lintText(`
 console.log(123);
 `
@@ -122,7 +122,7 @@ console.log(123);
     expect(result.length).toBe(1);
     expect(result[0].messages.length).toBe(1);
     expect(result[0].messages[0].message).toBe(`No magic number: 123.`);
-});
+}); */
 
 test('单行代码不超过100字符', async () => {
     let result;
@@ -205,7 +205,7 @@ console.log(aa);
     expect(result[0].messages[0].message).toBe(`Unexpected function expression.`);
 
     result = await eslint.lintText(`
-const aa = ['1', '2', '3'].map(item => item);
+const aa = ['1', '2', '3'].map((item) => item);
 console.log(aa);
 `
     );
@@ -227,7 +227,7 @@ console.log(aa);
     expect(result[0].messages.length).toBe(0);
 
     result = await eslint.lintText(`
-const aa = ['1', '2', '3'].map(item => item);
+const aa = ['1', '2', '3'].map((item) => item);
 console.log(aa);
 `
 );
