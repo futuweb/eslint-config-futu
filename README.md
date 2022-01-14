@@ -71,6 +71,9 @@ module.exports = {
 }
 ```
 
+## 注意事项
+
+- `arrow-parens`规则为`always`，如果项目有使用prettier，需要同样设置该选项为`always`（prettier 2.0默认为`always`）。
 
 
 ## 附：编辑器使用方式
