@@ -1,9 +1,12 @@
 /**
  * Created by JackieYao on 2020/12/23.
  */
+const base = require('./base');
+
 module.exports = {
     extends: [ 'plugin:@typescript-eslint/recommended' ],
     rules: {
+        ...base.rules,
         // 是否可使用require导入
         '@typescript-eslint/no-var-requires': 'off',
         // 是否可使用any类型
@@ -11,7 +14,7 @@ module.exports = {
         // 是否可使用`@ts-<directive>`
         '@typescript-eslint/ban-ts-comment': ['warn'],
         // 数组声明
-        '@typescript-eslint/array-type': ['error', 'array'],
+        '@typescript-eslint/array-type': ['error', {"default": "array"}],
         // 对象类型声明使用interface
         '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
         // 命名约定
