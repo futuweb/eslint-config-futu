@@ -61,7 +61,6 @@ module.exports = {
                 'memberVariableDeclaration': true
             }
         ],
-        '@typescript-eslint/no-inferrable-types': ['error', {'ignoreParameters': true}],
         // 关闭此规则，因为eslint8之前的版本对导入的类型定义会报错 xxx is defined but never used，
         // ts自己有类似的提醒，所以关闭eslint中的这个规则
         'no-unused-vars': 'off',

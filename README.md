@@ -115,6 +115,9 @@ ESLint package选择**项目中的**`node_modules/eslint`，注意是项目中�
 
 ## 历史记录
 
+### 2.1.1 2023-11-09
+- 删除一个ts规则：`@typescript-eslint/no-inferrable-types`
+
 ### 2.1.0-alpha.0 2022-03-25
 
 - 添加ts规则
